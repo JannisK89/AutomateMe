@@ -7,12 +7,32 @@
 </script>
 
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
 	export let tipData: TipData;
+	let toggled: boolean = false;
+
+	const toggleTip = () => (toggled = true);
 </script>
 
-<details class="bg-pink-400/70 p-4 my-4 rounded">
-	<summary class=""> {tipData.title}</summary>
-	<p class="font-mono text-xs my-4">{@html tipData.content}</p>
-</details>
+<button
+	on:click={toggleTip}
+	class="bg-pink-400/70 p-4 mt-4 rounded-xl"
+	class:cursor-default={toggled}
+>
+	{#if toggled && tipData.link !== null}
+		<a
+			transition:fade
+			href={tipData.link}
+			target="_blank"
+			rel="noreferrer"
+			class="font-semibold underline"
+		>
+			<span>{tipData.content}</span>
+		</a>
+	{:else if toggled}
+		<span>{tipData.content}</span>
+	{:else}
+		<h2>{tipData.title}</h2>
+	{/if}
+</button>
