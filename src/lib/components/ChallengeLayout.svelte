@@ -1,3 +1,3 @@
-<div class="max-w-4xl mx-auto my-10">
+<div class="max-w-2xl mx-auto my-10 flex flex-col justify-center align-middle ">
 	<slot />
 </div>
