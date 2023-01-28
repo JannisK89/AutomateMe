@@ -6,7 +6,7 @@
 
 <button
 	on:click={sideMenuToggle}
-	class="lg:left-[20%]  border-2 border-sky-600/50 bg-sky-600/70 text-slate-100 rounded-r-lg hidden lg:block h-screen "
+	class="lg:left-[20%] border-2 border-sky-600/50 bg-sky-600/70 text-slate-100 rounded-r-lg hidden lg:block h-screen "
 	class:lg:fixed={$showSideMenu}>{$showSideMenu ? '<	' : '>'}</button
 >
 <div

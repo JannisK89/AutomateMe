@@ -20,7 +20,7 @@
 	<aside
 		transition:fly={{ duration: 500, x: -500, opacity: 0.8, easing: quintOut }}
 		class="bg-sky-400/60  lg:w-1/5
-		flex flex-col lg:mr-4 lg:fixed lg:top-0 lg:left-0 lg:overflow-y-auto lg:block inset-0 lg:min-h-screen shadow-inner "
+		flex flex-col lg:mr-4 lg:fixed lg:top-0 lg:left-0 lg:overflow-y-auto lg:block inset-0 lg:min-h-screen shadow-inner lg:my-16"
 	>
 		<div class="m-6 lg:m-10 flex flex-col flex-wrap ">
 			<h1 class="text-2xl mb-2 font-semibold ">{menuData.header}</h1>

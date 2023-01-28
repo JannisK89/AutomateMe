@@ -9,7 +9,6 @@
 	};
 </script>
 
-<SideMenu {menuData} />
 <SideMenuButton />
 
 <div>
