@@ -6,10 +6,10 @@
 
 <button
 	on:click={sideMenuToggle}
-	class="lg:left-[25%]  border-2 border-black bg-slate-800 text-slate-100 rounded-r-lg"
-	class:lg:sticky={$showSideMenu}>{$showSideMenu ? '<	' : '>'}</button
+	class="lg:left-[20%]  border-2 border-sky-600/50 bg-sky-600/70 text-slate-100 rounded-r-lg hidden lg:block h-screen "
+	class:lg:fixed={$showSideMenu}>{$showSideMenu ? '<	' : '>'}</button
 >
 <div
-	class="flex flex-col items-center lg:pl-[25%]  mx-8 lg:mx-20 my-8 "
-	class:lg:pl-[25%]={$showSideMenu}
+	class="flex flex-col items-center lg:pl-[20%]  mx-8 lg:mx-20 my-8 "
+	class:lg:pl-[20%]={$showSideMenu}
 />
