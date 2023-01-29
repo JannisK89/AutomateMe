@@ -10,7 +10,4 @@
 	class:lg:fixed={$showSideMenu}>{$showSideMenu ? '<	' : '>'}</button
 >
 
-<div
-	class="flex flex-col items-center lg:pl-[20%]  mx-8 lg:mx-20 my-8 "
-	class:lg:pl-[20%]={$showSideMenu}
-/>
+<div class:lg:pl-[33%]={$showSideMenu} />
