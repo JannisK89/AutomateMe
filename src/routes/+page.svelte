@@ -1,52 +1,82 @@
 <script lang="ts">
-	import SideMenu from '$lib/components/sideMenu/SideMenu.svelte';
+	import SideMenu, { type SideMenuData } from '$lib/components/sideMenu/SideMenu.svelte';
 	import SideMenuButton from '$lib/components/sideMenu/SideMenuButton.svelte';
+	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
+	import ChallengeLayout from '$lib/components/ChallengeLayout.svelte';
 
-	const menuData = {
-		header: 'Challenge 1',
-		subHeader: 'Press the button!',
-		content: '<p> Its pretty simple, just press the button </p>'
+	const menuData: SideMenuData = {
+		header: '0. Welcome to AutomateMe!',
+		content: "<p> Don't forget to use your favorite test frameworks documentation as help!<p/>"
 	};
+
+	const tips: TipData[] = [
+		{
+			title: 'Getting Started with Playwright',
+			content: 'Playwright.dev',
+			link: 'https://playwright.dev/docs/intro'
+		},
+		{
+			title: 'Getting Started with Cypress',
+			content: 'Cypress.io',
+			link: 'https://docs.cypress.io/guides/getting-started/installing-cypress'
+		}
+	];
 </script>
 
+<SideMenu {menuData} {tips} />
 <SideMenuButton />
 
-<div>
-	<h1>Just press the damn button!</h1>
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in lorem ante. Nulla facilisi. In
-		bibendum feugiat purus, non lacinia massa dapibus id. Aliquam erat volutpat. Suspendisse sem
-		enim, vestibulum eget tortor id, maximus accumsan felis. Pellentesque viverra, tortor vel
-		venenatis malesuada, mi ante ultricies magna, vitae faucibus turpis ex sed elit. Aenean in dolor
-		in nisl hendrerit tincidunt. Curabitur vestibulum erat lacus, non laoreet justo viverra auctor.
-		Suspendisse ac maximus enim. Nunc metus massa, pretium a eleifend quis, ultricies tincidunt
-		felis. Donec elementum porttitor convallis. Phasellus suscipit urna et ullamcorper interdum.
-		Quisque eget felis sit amet urna bibendum fermentum. Duis auctor tortor sapien, ac volutpat
-		risus gravida quis. Nulla facilisi. Cras neque mi, bibendum at varius malesuada, ornare quis
-		nulla. In ullamcorper sollicitudin augue non sagittis. Class aptent taciti sociosqu ad litora
-		torquent per conubia nostra, per inceptos himenaeos. Proin laoreet nunc sit amet sollicitudin
-		tincidunt. Donec vel lectus faucibus, tempor leo id, tempus turpis. Cras egestas consectetur
-		sollicitudin. Vivamus convallis ac leo eu eleifend. Pellentesque mollis consequat lorem eget
-		malesuada. Vestibulum elementum euismod turpis non posuere. Nullam sit amet gravida velit, nec
-		dictum ligula. Nullam dapibus vulputate fringilla. Curabitur dictum lacus et enim tempor, et
-		mollis lectus dictum. Integer efficitur diam urna, at rhoncus felis iaculis quis. Etiam
-		venenatis neque eu sapien dapibus, id dapibus metus fermentum. Vivamus at nibh magna. Integer ut
-		volutpat justo. Etiam luctus, ex a consequat tempor, augue nisl consequat odio, nec iaculis ante
-		neque id leo. Cras mollis nunc eu lorem tincidunt, eget aliquet arcu efficitur. Donec porta
-		lorem id sagittis vehicula. Integer pellentesque urna nec bibendum rhoncus. Aliquam auctor
-		fringilla convallis. Integer rutrum nisl eu vulputate egestas. Praesent vel volutpat sapien,
-		eleifend tristique ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-		cubilia curae; Curabitur vestibulum velit eu varius porttitor. Integer ac sapien vel nulla
-		maximus cursus ut nec sem. Etiam sodales gravida ante, a mattis erat. Aliquam ante nibh, egestas
-		vitae laoreet eu, dignissim sodales arcu. Proin ac ligula malesuada, congue turpis in, imperdiet
-		ante. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in
-		faucibus. Fusce tempor vel felis vel tristique. Praesent scelerisque risus sit amet felis
-		hendrerit vehicula. Fusce dapibus id leo varius faucibus. Nunc et tincidunt nunc, vel
-		ullamcorper odio. Sed et est tortor. Praesent consequat mi nulla, vel pulvinar lacus porta ac.
-		Nunc sit amet semper ex. Nulla mattis quis urna et pellentesque. Quisque non metus consequat,
-		molestie dolor sed, condimentum urna. Pellentesque vitae augue non nisi vestibulum mattis eu vel
-		erat. Integer condimentum, tortor quis ultrices hendrerit, lacus dolor pulvinar mauris, nec
-		cursus metus tortor ut enim. Integer ac tristique dui.
+<ChallengeLayout>
+	<h2 class="text-xl font-semibold mb-2">What is Automate Me?</h2>
+	<p class="mb-2">
+		Automate Me is a <a
+			href="https://github.com/JannisK89/AutomateMe"
+			target="_blank"
+			rel="noreferrer"
+			class="underline"
+			>open source project
+		</a>for developers and test engineers to practice writing web/test automation in a safe and fun
+		environment by completing different challenges that get harder and harder as you progress.
 	</p>
-</div>
+	<p>
+		The idea is to use your favorite web/test automation framework documentation as a manual for
+		figuring out how to pass the different challenges.
+	</p>
+
+	<h2 class="text-xl font-semibold mt-6 mb-2">How does it work?</h2>
+	<p>
+		It's pretty simple! To your left side (on top if you are on small screens) is a menu that tells
+		you what you need to do for each challenge. When you manage to do what it tells you, you will
+		get an code that says <strong>"ASSERTME"</strong> that will let you know you completed the level.
+		To navigate between challenges, simply use the back and forward buttons on the side menu although
+		we recommend that you open each challenge in your tests using the corresponding URL.
+	</p>
+	<p class="mt-2">
+		We also highly recommend that you put each challenge in a separate test and add an assertion for
+		the text <strong>"ASSERTME"</strong> at the end of each test. That way when the test goes green you
+		know that you completed the challenge and can move on to the next one.
+	</p>
+
+	<h3 class=" font-semibold mt-4 mb-2">Playwright (using Javascript)</h3>
+	<code class="bg-black text-orange-400 text-sm p-2 rounded-t">
+		const assertion = page.getByText('ASSERTME')
+	</code>
+	<code class="bg-black text-orange-400 text-sm p-2 rounded-b">
+		expect(assertion).toBeVisible()
+	</code>
+	<h3 class=" font-semibold mt-4 mb-2">Cypress</h3>
+	<code class="bg-black text-orange-400 text-sm p-4 rounded"> cy.contains('ASSERTME') </code>
+
+	<h2 class="text-xl font-semibold mt-6 mb-2">Are there tutorials included?</h2>
+	<p>
+		For now no, all you get on each challenge is tips for how to solve the challenge that link to
+		the official documentation of the test tools, but it is something we have in mind for the
+		future.
+	</p>
+
+	<h2 class="text-xl font-semibold mt-6 mb-2">Can I only use Playwright or Cypress?</h2>
+	<p>
+		No, you are allowed to use any tool you want but the challenges and tips for each challenge are
+		created using Playwright or Cypress in mind.
+	</p>
+</ChallengeLayout>
