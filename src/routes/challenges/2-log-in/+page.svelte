@@ -66,8 +66,8 @@
 		</label>
 		<button
 			type="submit"
-			class="pt-2 pb-4 px-12 mt-2 mb-4 rounded-xl bg-amber-500 text-3xl font-semibold"
-			>Press Me</button
+			class="pt-2 pb-4 px-12 mt-2 mb-4 rounded-xl bg-amber-500 hover:bg-amber-500/80 text-3xl font-semibold"
+			>Log In</button
 		>
 		{#if completed}
 			<div class="text-green-600 text-lg">

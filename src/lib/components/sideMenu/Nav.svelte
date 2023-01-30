@@ -16,7 +16,7 @@
 			width="48"
 			height="48"
 			rotate={2}
-			class="border-r-2 border-black"
+			class="border-r-2 border-black hover:animate-pulse"
 		/>
 	</a>
 	<h1 class="text-xl font-semibold mx-2 ">{header}</h1>
@@ -25,7 +25,7 @@
 			icon={arrowCircleRightOutlineRounded}
 			width="48"
 			height="48"
-			class="border-l-2 border-black"
+			class="border-l-2 border-black hover:animate-pulse"
 		/>
 	</a>
 </div>

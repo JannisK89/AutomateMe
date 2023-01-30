@@ -39,7 +39,8 @@
 		<h1 class="text-3xl lg:text-5xl font-bold">Press the button!</h1>
 		<button
 			on:click={clickHandler}
-			class="py-6 px-20 rounded-3xl bg-orange-400 my-8 text-3xl font-semibold">Press Me</button
+			class="py-6 px-20 rounded-3xl bg-orange-400 hover:bg-orange-400/80 my-8 text-3xl font-semibold"
+			>Press Me</button
 		>
 		{#if completed}
 			<div class="text-green-600 text-lg">You made it! Your assert code: ASSERTME</div>

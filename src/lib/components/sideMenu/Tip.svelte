@@ -17,7 +17,7 @@
 
 <button
 	on:click={toggleTip}
-	class="bg-pink-400/70 p-4 mt-4 rounded-xl"
+	class="bg-pink-400/70 hover:bg-pink-400/50 p-4 mt-4 rounded-xl"
 	class:cursor-default={toggled}
 >
 	{#if toggled && tipData.link !== null}
