@@ -29,7 +29,7 @@
 <ChallengeLayout>
 	<h2 class="text-xl font-semibold mb-2">What is Daedalus?</h2>
 	<p class="mb-2">
-		Automate Me is a <a
+		Daedalus is a <a
 			href="https://github.com/JannisK89/AutomateMe"
 			target="_blank"
 			rel="noreferrer"
