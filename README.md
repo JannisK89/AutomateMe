@@ -1,38 +1,34 @@
-# create-svelte
+# Automate Me
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## What is Automate Me?
 
-## Creating a project
+Automate Me is a open source project for developers and test engineers to practice writing web/test automation in a safe and fun environment by completing different challenges that get harder and harder as you progress.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The idea is to use your favorite web/test automation framework documentation as a manual for figuring out how to pass the different challenges.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## How does it work?
 
-# create a new project in my-app
-npm create svelte@latest my-app
+It's pretty simple! To your left side (on top if you are on small screens) is a menu that tells you what you need to do for each challenge. When you manage to do what it tells you, you will get an code that says "ASSERTME" that will let you know you completed the level. To navigate between challenges, simply use the back and forward buttons on the side menu although we recommend that you open each challenge in your tests using the corresponding URL.
+
+We also highly recommend that you put each challenge in a separate test and add an assertion for the text "ASSERTME" at the end of each test. That way when the test goes green you know that you completed the challenge and can move on to the next one.
+
+### Playwright (using Javascript)
+
+```
+const assertion = page.getByText('ASSERTME')
+expect(assertion).toBeVisible()
 ```
 
-## Developing
+### Cypress
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```
+cy.contains('ASSERTME')
 ```
 
-## Building
+## Are there tutorials included?
 
-To create a production version of your app:
+For now no, all you get on each challenge is tips for how to solve the challenge that link to the official documentation of the test tools, but it is something we have in mind for the future.
 
-```bash
-npm run build
-```
+## Can I only use Playwright or Cypress?
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+No, you are allowed to use any tool you want but the challenges and tips for each challenge are created using Playwright or Cypress in mind.
