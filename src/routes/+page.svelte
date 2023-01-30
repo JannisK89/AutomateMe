@@ -5,7 +5,7 @@
 	import ChallengeLayout from '$lib/components/ChallengeLayout.svelte';
 
 	const menuData: SideMenuData = {
-		header: '0. Welcome to AutomateMe!',
+		header: '0. Welcome to Daedalus!',
 		content: "<p> Don't forget to use your favorite test frameworks documentation as help!<p/>"
 	};
 
@@ -27,7 +27,7 @@
 <SideMenuButton />
 
 <ChallengeLayout>
-	<h2 class="text-xl font-semibold mb-2">What is Automate Me?</h2>
+	<h2 class="text-xl font-semibold mb-2">What is Daedalus?</h2>
 	<p class="mb-2">
 		Automate Me is a <a
 			href="https://github.com/JannisK89/AutomateMe"

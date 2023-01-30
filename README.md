@@ -1,8 +1,8 @@
-# Automate Me
+# Daedalus
 
-## What is Automate Me?
+## What is Daedalus
 
-Automate Me is a open source project for developers and test engineers to practice writing web/test automation in a safe and fun environment by completing different challenges that get harder and harder as you progress.
+Daedalus is a open source project for developers and test engineers to practice writing web/test automation in a safe and fun environment by completing different challenges that get harder and harder as you progress.
 
 The idea is to use your favorite web/test automation framework documentation as a manual for figuring out how to pass the different challenges.
 
