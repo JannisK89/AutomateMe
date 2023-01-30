@@ -12,7 +12,7 @@
 	const menuData = {
 		header: '2. Log in',
 		content:
-			'Enter the username <strong>Admin</strong> and the password <strong>SafePass123</strong> and click the log in button'
+			'<p>A very common thing to automate, the log in screen.</p> <p>Enter the username <strong>Admin</strong> and the password <strong>SafePass123</strong> and click the log in button to get your assert code</p>'
 	};
 
 	const tips: TipData[] = [
