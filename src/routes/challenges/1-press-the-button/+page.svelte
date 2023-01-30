@@ -3,26 +3,43 @@
 	import SideMenu from '$lib/components/sideMenu/SideMenu.svelte';
 	import SideMenuButton from '$lib/components/sideMenu/SideMenuButton.svelte';
 	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
+	import type { SideMenuData } from '$lib/components/sideMenu/SideMenu.svelte';
 
-	const menuData = {
+	let completed = false;
+	const menuData: SideMenuData = {
 		header: '1. Press the button',
-		content: 'Its pretty simple, just press the button'
+		content:
+			"<p>Let's start with a simple one. Just press the <strong>button</strong> and you will get your assert code.<p>"
 	};
 
 	const tips: TipData[] = [
 		{
 			title: 'Playwright Tips',
-			content: 'Try using Locator.click',
+			content: 'Try using .click()',
 			link: 'https://playwright.dev/docs/api/class-locator#locator-click'
+		},
+		{
+			title: 'Cypress Tips',
+			content: 'Try using .click()',
+			link: 'https://docs.cypress.io/api/commands/click'
 		}
 	];
+
+	const clickHandler = () => (completed = true);
 </script>
 
 <SideMenu {menuData} {tips} />
 <SideMenuButton />
 
 <ChallengeLayout>
-	<h1 class="text-3xl lg:text-5xl font-bold">Just press the button!</h1>
-	<button class="py-6 px-20 rounded-3xl bg-orange-400 my-12 text-3xl font-semibold">Press Me</button
-	>
-</ChallengeLayout>
+	<div class="flex flex-col items-center">
+		<h1 class="text-3xl lg:text-5xl font-bold">Press the button!</h1>
+		<button
+			on:click={clickHandler}
+			class="py-6 px-20 rounded-3xl bg-orange-400 my-8 text-3xl font-semibold">Press Me</button
+		>
+		{#if completed}
+			<div class="text-green-600 text-lg">You made it! Your assert code: ASSERTME</div>
+		{/if}
+	</div></ChallengeLayout
+>
