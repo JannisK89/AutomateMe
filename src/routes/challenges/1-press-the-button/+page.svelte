@@ -4,12 +4,15 @@
 	import SideMenuButton from '$lib/components/sideMenu/SideMenuButton.svelte';
 	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
 	import type { SideMenuData } from '$lib/components/sideMenu/SideMenu.svelte';
+	import { fade } from 'svelte/transition';
 
 	let completed = false;
 	const menuData: SideMenuData = {
 		header: '1. Press the button',
 		content:
-			"<p>Let's start with a simple one. Just press the <strong>button</strong> and you will get your assert code.<p>"
+			"<p>Let's start with a simple one. Just press the <strong>button</strong> and you will get your assert code.<p>",
+		next: '/challenges/2-log-in',
+		previous: '/'
 	};
 
 	const tips: TipData[] = [
@@ -41,5 +44,5 @@
 		{#if completed}
 			<div class="text-green-600 text-lg">You made it! Your assert code: ASSERTME</div>
 		{/if}
-	</div></ChallengeLayout
->
+	</div>
+</ChallengeLayout>

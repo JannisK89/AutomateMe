@@ -3,6 +3,7 @@
 	import SideMenu from '$lib/components/sideMenu/SideMenu.svelte';
 	import SideMenuButton from '$lib/components/sideMenu/SideMenuButton.svelte';
 	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
+	import { fade } from 'svelte/transition';
 
 	let username: string = '';
 	let password: string = '';
@@ -12,7 +13,9 @@
 	const menuData = {
 		header: '2. Log in',
 		content:
-			'<p>A very common thing to automate, the log in screen.</p> <p>Enter the username <strong>Admin</strong> and the password <strong>SafePass123</strong> and click the log in button to get your assert code</p>'
+			'<p>A very common thing to automate, the log in screen.</p> <p>Enter the username <strong>Admin</strong> and the password <strong>SafePass123</strong> and click the log in button to get your assert code</p>',
+		next: '',
+		previous: '/challenges/1-press-the-button'
 	};
 
 	const tips: TipData[] = [

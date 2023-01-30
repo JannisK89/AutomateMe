@@ -6,7 +6,9 @@
 
 	const menuData: SideMenuData = {
 		header: '0. Welcome to Daedalus!',
-		content: "<p> Don't forget to use your favorite test frameworks documentation as help!<p/>"
+		content: "<p> Don't forget to use your favorite test frameworks documentation as help!<p/>",
+		next: '/challenges/1-press-the-button',
+		previous: ''	
 	};
 
 	const tips: TipData[] = [
