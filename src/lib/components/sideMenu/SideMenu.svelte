@@ -24,9 +24,9 @@
 	>
 		<div class="m-6 lg:m-10 flex flex-col flex-wrap ">
 			<h1 class="text-2xl mb-2 font-semibold ">{menuData.header}</h1>
-			<p class="mb-4 lg:tracking-wide	font-light">
+			<div class="mb-4 lg:tracking-wide font-light">
 				{@html menuData.content}
-			</p>
+			</div>
 			{#each tips as tip}
 				<Tip tipData={tip} />
 			{/each}
