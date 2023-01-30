@@ -40,15 +40,17 @@
 	</p>
 	<p>
 		The idea is to use your favorite web/test automation framework documentation as a manual for
-		figuring out how to pass the different challenges.
+		figuring out how to pass the different challenges. There are no limits to how much you can
+		automate and no blockers for automated browsers, so fly as close to the sun as you please young
+		Icarus!
 	</p>
 
 	<h2 class="text-xl font-semibold mt-6 mb-2">How does it work?</h2>
 	<p>
 		It's pretty simple! To your left side (on top if you are on small screens) is a menu that tells
 		you what you need to do for each challenge. When you manage to do what it tells you, you will
-		get an code that says <strong>"ASSERTME"</strong> that will let you know you completed the level.
-		To navigate between challenges, simply use the back and forward buttons on the side menu although
+		get a code that says <strong>"ASSERTME"</strong> that will let you know you completed the level.
+		To navigate between challenges, simply use the back and forward arrows on the side menu although
 		we recommend that you open each challenge in your tests using the corresponding URL.
 	</p>
 	<p class="mt-2">
