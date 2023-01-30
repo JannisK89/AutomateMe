@@ -22,7 +22,7 @@
 >
 	{#if toggled && tipData.link !== null}
 		<a
-			transition:fade
+			transition:fade|local
 			href={tipData.link}
 			target="_blank"
 			rel="noreferrer"

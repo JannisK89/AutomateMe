@@ -21,13 +21,13 @@
 	const tips: TipData[] = [
 		{
 			title: 'Playwright Tips',
-			content: 'Try using .input',
-			link: 'https://playwright.dev/docs/api/class-locator#locator-click'
+			content: 'Try using .fill()',
+			link: 'https://playwright.dev/docs/api/class-locator#locator-fill'
 		},
 		{
 			title: 'Cypress Tips',
-			content: 'Try using .input',
-			link: 'https://docs.cypress.io/api/commands/click'
+			content: 'Try using .type()',
+			link: 'https://docs.cypress.io/api/commands/type'
 		}
 	];
 
@@ -51,7 +51,7 @@
 				type="text"
 				bind:value={username}
 				placeholder="Enter your username here"
-				class="border-2 p-2 mt-2 "
+				class="border-2 p-2 mt-2 lg:w-80"
 			/>
 		</label>
 
@@ -61,20 +61,20 @@
 				type="password"
 				bind:value={password}
 				placeholder="Enter your password here"
-				class="border-2 p-2 mt-2 "
+				class="border-2 p-2 mt-2 lg:w-80 "
 			/>
 		</label>
 		<button
 			type="submit"
-			class="pt-2 pb-4 px-12 mt-2 mb-4 rounded-xl bg-amber-500 hover:bg-amber-500/80 text-3xl font-semibold"
+			class="pt-2 pb-4 px-12 mt-4 mb-4 rounded-xl bg-sky-500 hover:bg-sky-500/80 text-3xl font-semibold lg:w-80"
 			>Log In</button
 		>
 		{#if completed}
-			<div class="text-green-600 text-lg">
+			<div in:fade class="text-green-600 text-lg">
 				Good Job! Your well earned assert code:{' '} <span>ASSERTME</span>
 			</div>
 		{:else if error}
-			<div class="text-red-600 text-lg">Error, invalid credentials!</div>
+			<div in:fade class="text-red-600 text-lg">Error, invalid credentials!</div>
 		{/if}
 	</form>
 </ChallengeLayout>

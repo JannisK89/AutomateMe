@@ -8,7 +8,7 @@
 		header: '0. Welcome to Daedalus!',
 		content: "<p> Don't forget to use your favorite test frameworks documentation as help!<p/>",
 		next: '/challenges/1-press-the-button',
-		previous: ''	
+		previous: ''
 	};
 
 	const tips: TipData[] = [
@@ -62,11 +62,8 @@
 	</p>
 
 	<h3 class=" font-semibold mt-4 mb-2">Playwright (using Javascript)</h3>
-	<code class="bg-black text-orange-400 text-sm p-2 px-4 rounded-t">
-		const assertion = page.getByText('ASSERTME')
-	</code>
-	<code class="bg-black text-orange-400 text-sm p-2 px-4 rounded-b">
-		expect(assertion).toBeVisible()
+	<code class="bg-black text-orange-400 text-sm p-4 px-4 rounded">
+		await expect(page.getByText('ASSERTME')).toBeVisible()
 	</code>
 	<h3 class=" font-semibold mt-4 mb-2">Cypress</h3>
 	<code class="bg-black text-orange-400 text-sm p-4 rounded"> cy.contains('ASSERTME') </code>
