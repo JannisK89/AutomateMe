@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class="flex justify-between border-2 border-black rounded-md rounded-t-none items-center bg-orange-600/10"
+	class="flex justify-between border-2 border-black rounded-md items-center bg-orange-600/10"
 >
 	<a href={previous}>
 		<Icon
