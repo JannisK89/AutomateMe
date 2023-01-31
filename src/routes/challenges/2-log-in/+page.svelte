@@ -16,7 +16,8 @@
 		content:
 			'<p>A very common thing to automate, the log in screen.</p> <p>Enter the username <strong>Admin</strong> and the password <strong>SafePass123</strong> and click the log in button to get your assert code</p>',
 		next: '/challenges/3-mr-robot',
-		previous: '/challenges/1-press-the-button'
+		previous: '/challenges/1-press-the-button',
+		difficulty: 'Easy'
 	};
 
 	const tips: TipData[] = [

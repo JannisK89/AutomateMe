@@ -4,6 +4,7 @@
 		content: string;
 		next: string;
 		previous: string;
+		difficulty: string;
 	};
 </script>
 
@@ -14,6 +15,7 @@
 	import Tip from './Tip.svelte';
 	import type { TipData } from './Tip.svelte';
 	import Nav from './Nav.svelte';
+	import Difficulty from './Difficulty.svelte';
 
 	export let menuData: SideMenuData;
 	export let tips: TipData[];
@@ -27,6 +29,7 @@
 	>
 		<Nav {...menuData} />
 		<div class="m-6 lg:m-10 flex flex-col flex-wrap ">
+			<Difficulty difficulty={menuData.difficulty} />
 			<div class="mb-4 lg:tracking-wide font-light">
 				{@html menuData.content}
 			</div>

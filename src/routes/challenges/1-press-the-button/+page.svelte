@@ -12,7 +12,8 @@
 		content:
 			"<p>Let's start with a simple one. Just press the <strong>button</strong> and you will get your assert code.<p>",
 		next: '/challenges/2-log-in',
-		previous: '/'
+		previous: '/',
+		difficulty: 'Easy'
 	};
 
 	const tips: TipData[] = [
