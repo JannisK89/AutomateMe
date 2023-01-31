@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ChallengeLayout from '$lib/components/ChallengeLayout.svelte';
+	import CompletedMessage from '$lib/components/CompletedMessage.svelte';
 	import SideMenu from '$lib/components/sideMenu/SideMenu.svelte';
 	import SideMenuButton from '$lib/components/sideMenu/SideMenuButton.svelte';
 	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
@@ -70,11 +71,9 @@
 			>Log In</button
 		>
 		{#if completed}
-			<div in:fade class="text-green-600 text-lg">
-				Good Job! Your well earned assert code:{' '} <span>ASSERTME</span>
-			</div>
+			<CompletedMessage text="Good Job! Your well earned assert code: ASSERTME" />
 		{:else if error}
-			<div in:fade class="text-red-600 text-lg">Error, invalid credentials!</div>
+			<div in:fade|local class="text-red-600 text-lg">Error, invalid credentials!</div>
 		{/if}
 	</form>
 </ChallengeLayout>

@@ -4,7 +4,7 @@
 	import SideMenuButton from '$lib/components/sideMenu/SideMenuButton.svelte';
 	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
 	import type { SideMenuData } from '$lib/components/sideMenu/SideMenu.svelte';
-	import { fade } from 'svelte/transition';
+	import CompletedMessage from '$lib/components/CompletedMessage.svelte';
 
 	let completed = false;
 	const menuData: SideMenuData = {
@@ -43,7 +43,7 @@
 			>Press Me</button
 		>
 		{#if completed}
-			<div in:fade class="text-green-600 text-lg">You made it! Your assert code: ASSERTME</div>
+			<CompletedMessage text="You made it! Your assert code: ASSERTME" />
 		{/if}
 	</div>
 </ChallengeLayout>

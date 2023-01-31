@@ -16,7 +16,7 @@ test('Challenge 2', async ({ page }) => {
 	await expect(page.getByText('ASSERTME')).toBeVisible();
 });
 
-test.only('Page navigation should work', async ({ page }) => {
+test('Page navigation should work', async ({ page }) => {
 	await page.goto('/');
 	const [, leftArrow, rightArrow] = await page.getByRole('link').all();
 
