@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test';
 
+test.describe.configure({ mode: 'parallel' });
+
 test('Challenge 1', async ({ page }) => {
 	await page.goto('/challenges/1-press-the-button');
 	await page.getByRole('button', { name: 'Press Me' }).click();
@@ -16,21 +18,47 @@ test('Challenge 2', async ({ page }) => {
 	await expect(page.getByText('ASSERTME')).toBeVisible();
 });
 
+test('Challenge 3', async ({ page }) => {
+	await page.goto('/challenges/3-mr-robot');
+	const [button1, button2] = await page.getByRole('button', { name: /^[\d]+/ }).all();
+
+	const btn1Length = parseInt(await button1.innerText());
+	const btn2Length = parseInt(await button2.innerText());
+	const ddTarget = await page.locator('#correctddValue').innerText();
+
+	for (let i = btn1Length; i > 0; i--) {
+		await button1.click();
+	}
+	for (let i = btn2Length; i > 0; i--) {
+		await button2.click();
+	}
+
+	await page.getByRole('combobox').selectOption(ddTarget);
+
+	await expect(page.getByText('ASSERTME')).toBeVisible();
+});
+
 test('Page navigation should work', async ({ page }) => {
 	await page.goto('/');
 	const [, leftArrow, rightArrow] = await page.getByRole('link').all();
 
 	// Forward
 	await rightArrow.click();
-	await expect(page.getByRole('button', { name: 'Press Me' })).toBeVisible();
+	await expect(page.getByRole('heading', { name: '1. Press the button' })).toBeVisible();
 
 	await rightArrow.click();
-	await expect(page.getByRole('button', { name: 'Log In' })).toBeVisible();
+	await expect(page.getByRole('heading', { name: '2. Log In' })).toBeVisible();
+
+	await rightArrow.click();
+	await expect(page.getByRole('heading', { name: '3. Mr. Robot' })).toBeVisible();
 
 	// Backward
 	await leftArrow.click();
-	await expect(page.getByRole('button', { name: 'Press Me' })).toBeVisible();
+	await expect(page.getByRole('heading', { name: '2. Log In' })).toBeVisible();
 
 	await leftArrow.click();
-	await expect(page.getByRole('heading', { name: 'What is Daedalus' })).toBeVisible();
+	await expect(page.getByRole('heading', { name: '1. Press the button' })).toBeVisible();
+
+	await leftArrow.click();
+	await expect(page.getByRole('heading', { name: '0. Welcome to Daedalus' })).toBeVisible();
 });
