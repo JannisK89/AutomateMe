@@ -63,8 +63,8 @@
 	</p>
 
 	<h3 class=" font-semibold mt-4 mb-2">Playwright (using Javascript)</h3>
-	<code class="bg-black text-orange-400 text-sm p-4 px-4 rounded">
-		await expect(page.getByText('ASSERTME')).toBeVisible()
+	<code class="bg-black text-orange-400 text-sm p-4 px-4 rounded flex flex-wrap">
+		await expect(page.getByText('ASSERTME'))<span>.toBeVisible()</span>
 	</code>
 	<h3 class=" font-semibold mt-4 mb-2">Cypress</h3>
 	<code class="bg-black text-orange-400 text-sm p-4 rounded"> cy.contains('ASSERTME') </code>
