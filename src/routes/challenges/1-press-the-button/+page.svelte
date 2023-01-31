@@ -17,12 +17,12 @@
 
 	const tips: TipData[] = [
 		{
-			title: 'Playwright Tips',
+			title: 'Playwright Tip',
 			content: 'Try using .click()',
 			link: 'https://playwright.dev/docs/api/class-locator#locator-click'
 		},
 		{
-			title: 'Cypress Tips',
+			title: 'Cypress Tip',
 			content: 'Try using .click()',
 			link: 'https://docs.cypress.io/api/commands/click'
 		}

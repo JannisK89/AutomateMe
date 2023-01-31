@@ -15,18 +15,18 @@
 		header: '2. Log in',
 		content:
 			'<p>A very common thing to automate, the log in screen.</p> <p>Enter the username <strong>Admin</strong> and the password <strong>SafePass123</strong> and click the log in button to get your assert code</p>',
-		next: '',
+		next: '/challenges/3-mr-robot',
 		previous: '/challenges/1-press-the-button'
 	};
 
 	const tips: TipData[] = [
 		{
-			title: 'Playwright Tips',
+			title: 'Playwright Tip',
 			content: 'Try using .fill()',
 			link: 'https://playwright.dev/docs/api/class-locator#locator-fill'
 		},
 		{
-			title: 'Cypress Tips',
+			title: 'Cypress Tip',
 			content: 'Try using .type()',
 			link: 'https://docs.cypress.io/api/commands/type'
 		}
