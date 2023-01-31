@@ -1,7 +1,8 @@
 <div
 	class="w-full sticky top-0 border-b-2 bg-sky-400/40 rounded backdrop-hue-rotate-180 backdrop-blur-sm border-sky-600 p-2 text-5xl font-bold font-mono"
 >
-	<a href="/">
-		<span class="text-red lg:ml-10">Daedalus</span>
+	<a class="flex" href="/">
+		<span class="lg:ml-10">Daedalus</span>
+		<span class="font-mono  p-0 font-thin text-sm">BETA</span>
 	</a>
 </div>
