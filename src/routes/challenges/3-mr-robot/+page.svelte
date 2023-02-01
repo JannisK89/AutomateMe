@@ -53,7 +53,7 @@
 <SideMenuButton />
 
 <ChallengeLayout>
-	<div class="flex justify-between mt-4 lg:my-auto">
+	<div class="flex justify-between mt-4">
 		{#key value1}
 			<button
 				class="bg-red-400 border-2 border-red-700 w-24 lg:w-48 h-24 mx-4 rounded-full text-lg lg:text-2xl"
@@ -98,9 +98,11 @@
 			{/each}
 		</select>
 	</label>
-	{#if completed}
-		<div class="flex justify-center">
-			<CompletedMessage text="Mr. Robot is happy! : ASSERTME" />
-		</div>
-	{/if}
+	<div class="min-h-[2rem]">
+		{#if completed}
+			<div class="flex justify-center">
+				<CompletedMessage text="Mr. Robot is happy! : ASSERTME" />
+			</div>
+		{/if}
+	</div>
 </ChallengeLayout>

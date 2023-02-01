@@ -4,6 +4,6 @@
 </script>
 
 <Header />
-<div class="flex flex-wrap lg:flex-nowrap flex-col lg:flex-row min-w-full ">
+<div class="flex flex-wrap lg:flex-nowrap flex-col lg:flex-row min-w-full">
 	<slot />
 </div>

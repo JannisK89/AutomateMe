@@ -36,7 +36,7 @@
 <SideMenuButton />
 
 <ChallengeLayout>
-	<div class="flex flex-col items-center my-auto lg:mx-20">
+	<div class="flex flex-col items-center min-h-[13rem] min-w-[21rem]">
 		<h1 class="text-3xl lg:text-3xl font-bold">Press the button!</h1>
 		<button
 			on:click={clickHandler}
