@@ -7,16 +7,14 @@
 	export let previous: string;
 </script>
 
-<div
-	class="flex justify-between border-2 border-black rounded-md items-center bg-orange-600/10"
->
+<div class="flex justify-between border-2 lg:mt-10 border-slate-200 rounded-md items-center ">
 	<a href={previous}>
 		<Icon
 			icon={arrowCircleRightOutlineRounded}
 			width="48"
 			height="48"
 			rotate={2}
-			class="border-r-2 border-black hover:animate-pulse"
+			class="border-r-2 border-slate-200 hover:animate-pulse"
 		/>
 	</a>
 	<h1 class="text-xl font-semibold mx-2 ">{header}</h1>
@@ -25,7 +23,7 @@
 			icon={arrowCircleRightOutlineRounded}
 			width="48"
 			height="48"
-			class="border-l-2 border-black hover:animate-pulse"
+			class="border-l-2 border-slate-200 hover:animate-pulse"
 		/>
 	</a>
 </div>

@@ -45,7 +45,10 @@
 <SideMenuButton />
 
 <ChallengeLayout>
-	<form on:submit|preventDefault={onSubmit} class="flex flex-col flex-wrap items-center m-8 ">
+	<form
+		on:submit|preventDefault={onSubmit}
+		class="flex flex-col flex-wrap items-center mx-8 my-auto "
+	>
 		<h1 class="text-3xl lg:text-5xl font-bold">Log in</h1>
 		<label class="flex flex-col mt-6  mb-4 font-medium">
 			Username

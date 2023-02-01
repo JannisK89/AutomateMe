@@ -1,5 +1,5 @@
 <div
-	class="w-full sticky top-0 border-b-2 bg-sky-400/40 rounded backdrop-hue-rotate-180 backdrop-blur-sm border-sky-600 p-2 text-5xl font-bold font-mono"
+	class="w-full sticky top-0 border-b-2 rounded backdrop-hue-rotate-180 backdrop-blur-sm border-slate-200  bg-gray-100 p-2 text-5xl font-bold font-mono"
 >
 	<a class="flex" href="/">
 		<span class="lg:ml-10">Daedalus</span>

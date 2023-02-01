@@ -53,12 +53,13 @@
 <SideMenuButton />
 
 <ChallengeLayout>
-	<div class="flex justify-between mt-4 lg:mt-20">
+	<div class="flex justify-between mt-4 lg:my-auto">
 		{#key value1}
 			<button
-				class="bg-red-400 w-24 lg:w-48 h-24 mx-4 rounded-full text-lg lg:text-2xl"
+				class="bg-red-400 border-2 border-red-700 w-24 lg:w-48 h-24 mx-4 rounded-full text-lg lg:text-2xl"
 				on:click={() => value1--}
 				class:bg-green-400={value1 === 0}
+				class:border-green-700={value1 === 0}
 			>
 				<div in:fly={{ y: -20 }}>
 					{value1}
@@ -67,9 +68,10 @@
 		{/key}
 		{#key value2}
 			<button
-				class="bg-red-400 w-24 lg:w-48 h-24 mx-4 rounded-full text-2xl"
+				class="bg-red-400 border-2 border-red-700 w-24 lg:w-48 h-24 mx-4 rounded-full text-2xl"
 				on:click={() => value2--}
 				class:bg-green-400={value2 === 0}
+				class:border-green-700={value1 === 0}
 			>
 				<div in:fly={{ y: -20 }}>
 					{value2}

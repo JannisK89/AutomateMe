@@ -36,11 +36,11 @@
 <SideMenuButton />
 
 <ChallengeLayout>
-	<div class="flex flex-col items-center">
+	<div class="flex flex-col items-center my-auto">
 		<h1 class="text-3xl lg:text-5xl font-bold">Press the button!</h1>
 		<button
 			on:click={clickHandler}
-			class="py-6 px-20 rounded-3xl bg-red-500 hover:bg-red-500/80 my-8 text-3xl font-semibold"
+			class="py-6 px-20 rounded-3xl bg-sky-500 hover:bg-sky-500/80 my-8 text-3xl font-semibold"
 			>Press Me</button
 		>
 		{#if completed}
