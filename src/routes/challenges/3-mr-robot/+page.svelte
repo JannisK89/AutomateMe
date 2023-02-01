@@ -98,7 +98,7 @@
 			{/each}
 		</select>
 	</label>
-	<div class="min-h-[2rem]">
+	<div class="lg:min-h-[2rem]">
 		{#if completed}
 			<div class="flex justify-center">
 				<CompletedMessage text="Mr. Robot is happy! : ASSERTME" />

@@ -47,7 +47,7 @@
 <ChallengeLayout>
 	<form
 		on:submit|preventDefault={onSubmit}
-		class="flex flex-col flex-wrap items-center mx-8 min-h-[24rem] min-w-[26rem] "
+		class="flex flex-col flex-wrap items-center mx-8 lg:min-h-[24rem] lg:min-w-[26rem] "
 	>
 		<h1 class="text-3xl lg:text-5xl font-bold">Log in</h1>
 		<label class="flex flex-col mt-6  mb-4 font-medium">
