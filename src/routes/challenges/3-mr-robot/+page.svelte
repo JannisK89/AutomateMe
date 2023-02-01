@@ -71,7 +71,7 @@
 				class="bg-red-400 border-2 border-red-700 w-24 lg:w-48 h-24 mx-4 rounded-full text-2xl"
 				on:click={() => value2--}
 				class:bg-green-400={value2 === 0}
-				class:border-green-700={value1 === 0}
+				class:border-green-700={value2 === 0}
 			>
 				<div in:fly={{ y: -20 }}>
 					{value2}

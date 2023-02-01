@@ -28,7 +28,7 @@
 		flex flex-col lg:mr-4 lg:fixed lg:top-0 lg:left-0 lg:overflow-y-auto lg:block inset-0 lg:min-h-screen  lg:my-16 lg:border-t-2 border-slate-200"
 	>
 		<Nav {...menuData} />
-		<div class="m-6 lg:m-10 flex flex-col flex-wrap ">
+		<div class="m-6 lg:mx-10 flex flex-col flex-wrap ">
 			<Difficulty difficulty={menuData.difficulty} />
 			<div class="mb-4 lg:tracking-wide font-light">
 				{@html menuData.content}

@@ -17,8 +17,10 @@
 
 <button
 	on:click={toggleTip}
-	class="bg-gray-300 hover:bg-gray-200 p-4 mt-4 rounded-xl"
+	class="hover:bg-zinc-300 p-4 mt-4 rounded-xl shadow-md"
 	class:cursor-default={toggled}
+	class:bg-gray-200={!toggled}
+	class:bg-zinc-300={toggled}
 >
 	{#if toggled && tipData.link !== null}
 		<a
