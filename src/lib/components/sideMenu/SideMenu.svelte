@@ -25,7 +25,7 @@
 	<aside
 		transition:fly|local={{ duration: 600, x: -2000, opacity: 0.8, easing: quintOut }}
 		class="lg:w-4/12 bg-gray-100
-		flex flex-col lg:mr-4 lg:fixed lg:top-0 lg:left-0 lg:overflow-y-auto lg:block inset-0 lg:min-h-screen  lg:my-16 lg:border-t-2 border-slate-200"
+		flex flex-col lg:mr-4 lg:fixed lg:top-0 lg:left-0 lg:overflow-y-auto lg:block inset-0 lg:h-[calc(100vh-4.2rem)]  lg:my-16 lg:border-t-2 border-slate-200"
 	>
 		<Nav {...menuData} />
 		<div class="m-6 lg:mx-10 flex flex-col flex-wrap ">
