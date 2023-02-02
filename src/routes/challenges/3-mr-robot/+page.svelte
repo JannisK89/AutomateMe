@@ -20,7 +20,7 @@
 		header: '3. Mr. Robot',
 		content:
 			'<p> Mr. Robot is in a bad mood! Press each button the number of times displayed on each button and pick the correct soda option from the drop down.</p> <strong>Be aware that Mr. Robot changes his mind often,	 all values are dynamic and change each time!</strong>',
-		next: '',
+		next: '/challenges/4-bad-data',
 		previous: '/challenges/2-log-in',
 		difficulty: 'Hard'
 	};

@@ -38,6 +38,30 @@ test('Challenge 3', async ({ page }) => {
 	await expect(page.getByText('ASSERTME')).toBeVisible();
 });
 
+test('Challenge 4', async ({ page }) => {
+	const testData = [
+		{
+			name: 'Elrich',
+			age: 40
+		},
+		{
+			name: 'Jian',
+			age: 25
+		}
+	];
+
+	await page.route('**/api/users', (route) =>
+		route.fulfill({
+			status: 200,
+			body: JSON.stringify(testData)
+		})
+	);
+
+	await page.goto('/challenges/4-bad-data');
+
+	await expect(page.getByText('ASSERTME')).toBeVisible();
+});
+
 test('Page navigation should work', async ({ page }) => {
 	await page.goto('/');
 	const [, leftArrow, rightArrow] = await page.getByRole('link').all();
@@ -52,7 +76,13 @@ test('Page navigation should work', async ({ page }) => {
 	await rightArrow.click();
 	await expect(page.getByRole('heading', { name: '3. Mr. Robot' })).toBeVisible();
 
+	await rightArrow.click();
+	await expect(page.getByRole('heading', { name: '4. Bad Data ' })).toBeVisible();
+
 	// Backward
+	await leftArrow.click();
+	await expect(page.getByRole('heading', { name: '3. Mr. Robot' })).toBeVisible();
+
 	await leftArrow.click();
 	await expect(page.getByRole('heading', { name: '2. Log In' })).toBeVisible();
 
