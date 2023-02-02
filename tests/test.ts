@@ -1,12 +1,16 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 test.describe.configure({ mode: 'parallel' });
+
+const assertme = async (page: Page) => {
+	await expect(page.getByText('ASSERTME')).toBeVisible();
+};
 
 test('Challenge 1', async ({ page }) => {
 	await page.goto('/challenges/1-press-the-button');
 	await page.getByRole('button', { name: 'Press Me' }).click();
 
-	await expect(page.getByText('ASSERTME')).toBeVisible();
+	await assertme(page);
 });
 
 test('Challenge 2', async ({ page }) => {
@@ -15,7 +19,7 @@ test('Challenge 2', async ({ page }) => {
 	await page.getByLabel('Password').fill('SafePass123');
 	await page.getByRole('button', { name: 'Log In' }).click();
 
-	await expect(page.getByText('ASSERTME')).toBeVisible();
+	await assertme(page);
 });
 
 test('Challenge 3', async ({ page }) => {
@@ -35,7 +39,7 @@ test('Challenge 3', async ({ page }) => {
 
 	await page.getByRole('combobox').selectOption(ddTarget);
 
-	await expect(page.getByText('ASSERTME')).toBeVisible();
+	await assertme(page);
 });
 
 test('Challenge 4', async ({ page }) => {
@@ -59,7 +63,7 @@ test('Challenge 4', async ({ page }) => {
 
 	await page.goto('/challenges/4-bad-data');
 
-	await expect(page.getByText('ASSERTME')).toBeVisible();
+	await assertme(page);
 });
 
 test('Page navigation should work', async ({ page }) => {
