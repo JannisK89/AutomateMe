@@ -61,6 +61,12 @@
 	<div class="flex flex-col items-center lg:min-h-[13rem] lg:min-w-[21rem]">
 		<h1 class="text-3xl lg:text-3xl font-bold mb-10">Users</h1>
 		<table class="mb-8">
+			<tr class="flex flex-col">
+				<div class="flex ">
+					<p class="border border-slate-300 p-4 min-w-[10rem] max-w-[10rem] flex justify-center">Name</p>
+					<p class="border border-slate-300 p-4 min-w-[3rem] max-w-[3rem] flex justify-center">Age</p>
+				</div>
+			</tr>
 			{#each users as user}
 				<User {...user} />
 			{/each}
