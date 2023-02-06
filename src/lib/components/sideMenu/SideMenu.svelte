@@ -27,7 +27,7 @@
 		class="lg:w-4/12 bg-gray-100
 		flex flex-col lg:mr-4 lg:fixed lg:top-0 lg:left-0 lg:overflow-y-auto lg:block inset-0 lg:h-[calc(100vh-4.2rem)]  lg:my-16 lg:border-t-2 border-slate-200"
 	>
-		<Nav {...menuData} />
+		<Nav header={menuData.header} next={menuData.next} previous={menuData.previous} />
 		<div class="m-6 lg:mx-10 flex flex-col flex-wrap ">
 			<Difficulty difficulty={menuData.difficulty} />
 			<div class="mb-4 lg:tracking-wide font-light">
