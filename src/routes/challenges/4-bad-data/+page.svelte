@@ -19,7 +19,7 @@
 		header: '4. Bad Data',
 		content:
 			"<p>It's pretty common that the back end is missing test data that we need to test something on the front end.</p> <p>The data we are fetching from the API is not what we need, we need a user that is at least 40 years old.</p>",
-		next: '',
+		next: '/challenges/5-create-a-quote',
 		previous: '/challenges/3-mr-robot',
 		difficulty: 'Medium'
 	};
@@ -63,8 +63,12 @@
 		<table class="mb-8">
 			<tr class="flex flex-col">
 				<div class="flex ">
-					<p class="border border-slate-300 p-4 min-w-[10rem] max-w-[10rem] flex justify-center">Name</p>
-					<p class="border border-slate-300 p-4 min-w-[3rem] max-w-[3rem] flex justify-center">Age</p>
+					<p class="border border-slate-300 p-4 min-w-[10rem] max-w-[10rem] flex justify-center">
+						Name
+					</p>
+					<p class="border border-slate-300 p-4 min-w-[3rem] max-w-[3rem] flex justify-center">
+						Age
+					</p>
 				</div>
 			</tr>
 			{#each users as user}

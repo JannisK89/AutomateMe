@@ -10,9 +10,15 @@
 	};
 </script>
 
-<ul class="bg-slate-50 border p-2 rounded-xl flex flex-wrap min-w-full min-h-[4rem] justify-center">
+<ul
+	class="bg-slate-50 border p-2 rounded-xl flex flex-wrap min-w-full max-w- lg:min-w-[100vh] min-h-[4rem] justify-center"
+>
 	{#each itemDragList as item}
-		<li class="m-1 border p-2" draggable="true" on:dragstart={(e) => dragStartHandler(e)}>
+		<li
+			class="m-1 border p-2 select-none cursor-pointer hover:bg-gray-100"
+			draggable="true"
+			on:dragstart={(e) => dragStartHandler(e)}
+		>
 			{item}
 		</li>
 	{/each}
