@@ -66,6 +66,19 @@ test('Challenge 4', async ({ page }) => {
 	await assertme(page);
 });
 
+test('Challenge 5', async ({ page }) => {
+	await page.goto('/challenges/5-create-a-quote');
+	const [dragZone, dropZone] = await page.getByRole('list').all();
+	const quote = await page.locator('q').innerText();
+	const splitQuote = quote.split(' ');
+
+	for await (const word of splitQuote) {
+		await dragZone.getByText(word, { exact: true }).first().dragTo(dropZone);
+	}
+
+	await assertme(page);
+});
+
 test('Page navigation should work', async ({ page }) => {
 	await page.goto('/');
 	const [, leftArrow, rightArrow] = await page.getByRole('link').all();
@@ -83,7 +96,13 @@ test('Page navigation should work', async ({ page }) => {
 	await rightArrow.click();
 	await expect(page.getByRole('heading', { name: '4. Bad Data ' })).toBeVisible();
 
+	await rightArrow.click();
+	await expect(page.getByRole('heading', { name: '5. Create a quote' })).toBeVisible();
+
 	// Backward
+	await leftArrow.click();
+	await expect(page.getByRole('heading', { name: '4. Bad Data ' })).toBeVisible();
+
 	await leftArrow.click();
 	await expect(page.getByRole('heading', { name: '3. Mr. Robot' })).toBeVisible();
 
