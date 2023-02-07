@@ -11,7 +11,7 @@
 </script>
 
 <ul
-	class="bg-slate-50 border p-2 rounded-xl flex flex-wrap min-w-full max-w- lg:min-w-[100vh] min-h-[4rem] justify-center"
+	class="bg-slate-50 border p-2 rounded-xl flex flex-wrap min-w-full lg:min-w-[40rem] min-h-[4rem] justify-center"
 >
 	{#each itemDragList as item}
 		<li

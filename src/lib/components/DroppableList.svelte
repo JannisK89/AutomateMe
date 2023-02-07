@@ -24,7 +24,7 @@
 </script>
 
 <ul
-	class="bg-slate-50 mb-6  border p-2 rounded-xl flex flex-wrap min-w-full lg:min-w-[100vh] min-h-[4rem] justify-center"
+	class="bg-slate-50 mb-6  border p-2 rounded-xl flex flex-wrap min-w-full lg:min-w-[40rem] min-h-[4rem] justify-center"
 	on:drop|preventDefault={(e) => dropHandler(e)}
 	on:dragover|preventDefault={(e) => dragOverHandler(e)}
 >
