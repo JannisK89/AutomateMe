@@ -85,9 +85,7 @@
 
 		{#if completed}
 			<CompletedMessage text="That is correct! : ASSERTME" />
-		{/if}
-
-		{#if !completed && itemDragList.length === 0}
+		{:else if !completed && itemDragList.length === 0}
 			<p transition:fade class="text-red-600 ">The words are not in the correct order.</p>
 		{/if}
 	</div>
