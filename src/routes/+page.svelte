@@ -32,13 +32,8 @@
 <ChallengeLayout>
 	<h2 class="text-xl font-semibold mb-2 ">What is Daedalus?</h2>
 	<p class="mb-2">
-		Daedalus is a <a
-			href="https://github.com/JannisK89/AutomateMe"
-			target="_blank"
-			rel="noreferrer"
-			class="underline"
-			>open source project
-		</a>for developers and test engineers to practice writing web/test automation in a safe and fun
+		Daedalus is an open source project
+		for developers and test engineers to practice writing web/test automation in a safe and fun
 		environment by completing different challenges that get harder and harder as you progress.
 	</p>
 	<p>
