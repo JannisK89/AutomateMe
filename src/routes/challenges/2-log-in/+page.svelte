@@ -6,6 +6,7 @@
 	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
 	import { fade } from 'svelte/transition';
 	import Input from '$lib/components/Input.svelte';
+	import Button from '$lib/components/Button.svelte';
 
 	let username: string = '';
 	let password: string = '';
@@ -59,11 +60,7 @@
 			placeholder="Enter your password here"
 		/>
 
-		<button
-			type="submit"
-			class="pt-2 pb-4 px-12 mt-4 mb-4 rounded-xl bg-sky-500 hover:bg-sky-500/80 text-3xl font-semibold lg:w-80"
-			>Log In</button
-		>
+		<Button type="submit" text="Log In" />
 		{#if completed}
 			<CompletedMessage text="Good Job! Your well earned assert code: ASSERTME" />
 		{:else if error}
