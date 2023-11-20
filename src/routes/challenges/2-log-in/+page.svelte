@@ -5,6 +5,7 @@
 	import SideMenuButton from '$lib/components/sideMenu/SideMenuButton.svelte';
 	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
 	import { fade } from 'svelte/transition';
+	import Input from '$lib/components/Input.svelte';
 
 	let username: string = '';
 	let password: string = '';
@@ -50,25 +51,14 @@
 		class="flex flex-col flex-wrap items-center mx-8 lg:min-h-[24rem] lg:min-w-[26rem] "
 	>
 		<h1 class="text-3xl lg:text-5xl font-bold">Log in</h1>
-		<label class="flex flex-col mt-6  mb-4 font-medium">
-			Username
-			<input
-				type="text"
-				bind:value={username}
-				placeholder="Enter your username here"
-				class="border-2 p-2 mt-2 lg:w-80"
-			/>
-		</label>
+		<Input bind:value={username} label="Username" placeholder="Enter your username here" />
+		<Input
+			bind:value={password}
+			type="password"
+			label="Password"
+			placeholder="Enter your password here"
+		/>
 
-		<label class="flex flex-col font-medium mb-4">
-			Password
-			<input
-				type="password"
-				bind:value={password}
-				placeholder="Enter your password here"
-				class="border-2 p-2 mt-2 lg:w-80 "
-			/>
-		</label>
 		<button
 			type="submit"
 			class="pt-2 pb-4 px-12 mt-4 mb-4 rounded-xl bg-sky-500 hover:bg-sky-500/80 text-3xl font-semibold lg:w-80"
