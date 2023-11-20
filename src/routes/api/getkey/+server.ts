@@ -9,3 +9,8 @@ export const POST: RequestHandler = async ({ request }) => {
 	};
 	return json(cryptKey);
 };
+
+export const GET: RequestHandler = async () => {
+	const key = crypto.randomUUID();
+	return json({ key: key }, { status: 200 });
+};
