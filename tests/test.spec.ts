@@ -79,6 +79,17 @@ test('Challenge 5', async ({ page }) => {
 	await assertme(page);
 });
 
+test('Challenge 6', async ({ page, request }) => {
+	await page.goto('/challenges/6-countersign');
+	await page.waitForRequest('/api/getkey');
+	const passcode = await page.getByLabel('Your pass code').inputValue();
+	const response = await request.post('/api/getkey', { data: passcode });
+	const json = await response.json();
+	await page.getByLabel('Response').fill(json.key);
+	await page.getByRole('button', { name: 'Submit' }).click();
+
+	await assertme(page);
+});
 test('Page navigation should work', async ({ page }) => {
 	await page.goto('/');
 	const [, leftArrow, rightArrow] = await page.getByRole('link').all();
@@ -99,7 +110,13 @@ test('Page navigation should work', async ({ page }) => {
 	await rightArrow.click();
 	await expect(page.getByRole('heading', { name: '5. Create a quote' })).toBeVisible();
 
+	await rightArrow.click();
+	await expect(page.getByRole('heading', { name: '6. Countersign' })).toBeVisible();
+
 	// Backward
+	await leftArrow.click();
+	await expect(page.getByRole('heading', { name: '5. Create a quote' })).toBeVisible();
+
 	await leftArrow.click();
 	await expect(page.getByRole('heading', { name: '4. Bad Data ' })).toBeVisible();
 
