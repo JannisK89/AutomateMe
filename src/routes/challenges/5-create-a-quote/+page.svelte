@@ -15,7 +15,7 @@
 		header: '5. Create a quote',
 		content:
 			'<p>Like the title suggest, we need to put together words to create the needed quote, so drag and drop words in order to create it. <strong>Keep in mind that the quote is not always the same!</strong></p>',
-		next: '',
+		next: '/challenges/6-countersign',
 		previous: '/challenges/4-bad-data',
 		difficulty: 'Hard'
 	};

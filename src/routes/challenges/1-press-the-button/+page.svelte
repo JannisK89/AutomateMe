@@ -5,6 +5,7 @@
 	import type { TipData } from '$lib/components/sideMenu/Tip.svelte';
 	import type { SideMenuData } from '$lib/components/sideMenu/SideMenu.svelte';
 	import CompletedMessage from '$lib/components/CompletedMessage.svelte';
+	import Button from '$lib/components/Button.svelte';
 
 	let completed = false;
 	const menuData: SideMenuData = {
@@ -37,12 +38,8 @@
 
 <ChallengeLayout>
 	<div class="flex flex-col items-center lg:min-h-[13rem] lg:min-w-[21rem]">
-		<h1 class="text-3xl lg:text-3xl font-bold">Press the button!</h1>
-		<button
-			on:click={clickHandler}
-			class="py-6 px-20 rounded-3xl bg-sky-500 hover:bg-sky-500/80 my-8 text-2xl font-semibold"
-			>Press Me</button
-		>
+		<h1 class="text-3xl lg:text-3xl font-bold pb-4">Press the button!</h1>
+		<Button onClick={clickHandler} text="Press Me" />
 		{#if completed}
 			<CompletedMessage text="You made it! Your assert code: ASSERTME" />
 		{/if}
