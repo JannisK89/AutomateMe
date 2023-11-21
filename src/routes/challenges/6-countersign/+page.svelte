@@ -16,7 +16,7 @@
 	const menuData: SideMenuData = {
 		header: '6. Countersign',
 		content:
-			'<p>You got your passcode but only the encypted version is accepted by the server. Send your pass code to <strong>/api/getkey</strong> using a <strong> POST </strong> request with <strong>plain text </strong> to receive your encrypted key and enter it into the response input and click submit to receive your reward.</p>',
+			'<p>You got your passcode but only the encypted version is accepted by the server. Send your pass code to <strong>/api/getkey</strong> using a <strong> POST </strong> request with <strong>plain text </strong> to receive your encrypted key. Enter it into the response input and click submit to receive your reward.</p>',
 		next: '',
 		previous: '/challenges/5-create-a-quote',
 		difficulty: 'Hard'
